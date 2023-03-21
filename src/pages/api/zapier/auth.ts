@@ -8,7 +8,8 @@ type Response = {
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Response>) {
   try {
     console.log("/zapier/auth");
-    if (req.headers["X-API-KEY"] === process.env.X_API_KEY) return res.status(200).json({ success: true });
+    console.log(req.headers)
+    if (req.headers["x-api-key"] === process.env.X_API_KEY) return res.status(200).json({ success: true });
     return res.status(400).json({ success: false });
   } catch (error) {
     console.error(error);

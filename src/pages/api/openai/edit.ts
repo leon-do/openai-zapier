@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     const response = await openai.createEdit({
       model: "text-davinci-edit-001",
       input: req.body.message,
-      instruction: "Fix the spelling mistakes",
+      instruction: req.body.instruction // "Fix the spelling mistakes",
     });
     res.status(200).json({ response: response.data.choices[0].text ? response.data.choices[0].text.replace(/(\r\n|\n|\r)/gm, "") : "error" });
   } catch (error) {

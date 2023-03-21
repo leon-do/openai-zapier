@@ -8,6 +8,7 @@ Add OpenAI API Key: https://platform.openai.com/account/api-keys
 
 ```bash
 OPENAI_API_KEY=sk-keyhere
+X_API_KEY=xApiKey
 ```
 
 First, run the development server:

@@ -57,7 +57,7 @@ Given a prompt and an instruction, the model will return an edited version of th
 
 ```bash
 curl --location 'http://localhost:3000/api/edit' \
---header 'x-api-key: web123' \
+--header 'x-api-key: xApiKey' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'message=What day of the wek is it?'
 ```
@@ -67,5 +67,8 @@ curl --location 'http://localhost:3000/api/edit' \
 Given a input text, outputs if the model classifies it as violating OpenAI's content policy.
 
 ```bash
-
+curl --location 'http://localhost:3000/api/moderation' \
+--header 'x-api-key: xApiKey' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'message=I want to kill them.'
 ```
